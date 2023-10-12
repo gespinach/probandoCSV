@@ -39,7 +39,8 @@ class ItemCarrito {
 
 //----------Leer datos de csv---------------------------------------------
 let numlinea = 0;
-fetch("./ejemplo.txt")
+let archivo = "https://raw.githubusercontent.com/gespinach/probandoCSV/main/datos/ejemplo.csv";
+fetch(archivo)
   .then(respuesta => respuesta.text())
   .then(contenido => {
     let lineas = contenido.split(/\n/);
